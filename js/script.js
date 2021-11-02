@@ -94,13 +94,37 @@ function setClock(id, endtime) {
 
 }
 
-setClock('timer', deadLine)
+setClock('timer', deadLine);
 
 
+// Parallax
 
 
+function goParallax () {
+    if (innerWidth > 1800) {
+        return
+    } else if (innerWidth < 1800) {
+        document.addEventListener('mousemove', parallax)
+        const elem = document.querySelector('.main-screen')
 
+        function parallax(e) {
+            let w = window.innerWidth / 2
+            let h = window.innerHeight / 2
+            let mouseX = e.clientX
+            let mouseY = e.clientY
+            let x = `${50 - (mouseX - w) * 0.03}% ${50 - (mouseY - h) * 0.03 }%`
 
+            elem.style.backgroundPosition = x
+        } 
+    } 
+}
 
+goParallax()
 
-
+window.addEventListener("resize", function() {
+    if (window.matchMedia("(min-width: 1800px)").matches) {
+        goParallax()
+    } else { 
+        return
+    }
+});
