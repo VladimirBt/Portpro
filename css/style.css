@@ -55,6 +55,13 @@ body{
 	padding-top: 237px;
 }
 
+@media(max-width:1800px){
+	.main-screen{
+		background-size: auto;
+		min-height: auto;
+	}
+}
+
 .header{
 	position: absolute;
 	top: 0;
@@ -359,6 +366,7 @@ body{
 .main__body{
 	max-width: 600px;
 	margin-left: 20px;
+	padding-bottom: 70px;
 }
 
 .main__title{
@@ -685,14 +693,20 @@ body{
 	font-size: 13px;
 	line-height: 25px;
 	font-weight: 600;
-	color: #3753da;
+	color: #2bd2ff;
 	margin-top: 24px;
 	cursor: pointer;
+	transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
 }
 
 .shipping__click:hover{
-	text-shadow: 0 0 3px #2bd2ff;
-	
+	color: #2bd2ff;
+	text-shadow: 0 0 5px #2bd1ff9c;
+	letter-spacing: 2px;	
 }
 
 /* offer */
